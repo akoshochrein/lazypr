@@ -1,24 +1,19 @@
-// Copyright (c) 2012 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-
-function click(e) {
-    alert('dafaq')
-  // chrome.tabs.executeScript(null,
-  //     {code:"document.body.style.backgroundColor='" + e.target.id + "'"});
-}
-
 
 function fillWithTemplate() {
-    
-}
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState==4 && xhr.status==200) {
+            chrome.tabs.executeScript(null, {
+                code:"document.getElementById(\"pull_request_body\").value = '" + xhr.responseText.replace(/^\s+|\s+$/g, "") + "';"
+            });
+        }
+    }
+    xhr.open("GET","https://raw.githubusercontent.com/akoskaaa/lazypr/master/templates/standard.md",true);
+    xhr.send();
+};
 
 
 document.addEventListener('DOMContentLoaded', function () {
     var standardTemplate = document.getElementById('i-template-standard');
-    standardTemplate.addEventListener('click')
-  for (var i = 0; i < divs.length; i++) {
-    divs[i].addEventListener('click', fillWithTemplate);
-  }
+    standardTemplate.addEventListener('click', fillWithTemplate);
 });
