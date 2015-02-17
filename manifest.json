@@ -1,0 +1,45 @@
+// {
+//     "name": "LazyPR",
+//     "version": "0.0.1",
+//     "manifest_version": 2,
+//     "browser_action": {
+//         "default_icon": {
+//             "19": "img/icon19.png",
+//             "38": "img/icon38.png"
+//         }
+//         //"default_title": "Insert Pull Request Template",
+//         //"default_popup": "index.html"
+//     },
+
+//     "background": {
+//         "scripts": ["background.js"],
+//         "persistent": false
+//     },
+
+//     // "content_scripts": [
+//     //     {
+//     //         "matches": ["https://github.com/*"],
+//     //         "js": ["content.js"]
+//     //     }
+//     // ]
+//     "permissions": ["<all_urls>"]
+// }
+
+{
+  "manifest_version": 2,
+
+  "name": "background-colorpeek",
+  "version": "1.0",
+  "description": "Get every background-color from the current tab.",
+
+  "browser_action": {
+    "default_icon": "img/icon19.png"
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  
+  "permissions": ["<all_urls>"]
+}
