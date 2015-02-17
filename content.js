@@ -1,10 +1,12 @@
 
 function fillWithTemplate() {
-    var xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest(),
+        sanitizedResponse = '';
     xhr.onreadystatechange = function() {
         if (xhr.readyState==4 && xhr.status==200) {
+            sanitizedResponse = xhr.responseText.replace(/\r\n|\n|\r/g, "\\n");
             chrome.tabs.executeScript(null, {
-                code:"document.getElementById(\"pull_request_body\").value = '" + xhr.responseText.replace(/^\s+|\s+$/g, "") + "';"
+                code:"document.getElementById(\"pull_request_body\").value = '" + sanitizedResponse + "';"
             });
         }
     }
