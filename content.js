@@ -1,4 +1,5 @@
 
+
 function fillWithTemplate() {
     var xhr = new XMLHttpRequest(),
         sanitizedResponse = '';
