@@ -12,6 +12,7 @@ function fillWithTemplate(templateId) {
         }
     }
     xhr.open('GET', 'https://raw.githubusercontent.com/akoskaaa/lazypr/master/templates/' + templateId + '.md', true);
+    // https://raw.githubusercontent.com/akoskaaa/lazypr/master/templates/frontend.md
     xhr.send();
 };
 
@@ -27,4 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
     frontendTemplate.addEventListener('click', function () {
         fillWithTemplate('frontend');
     });
+
+    // Lose initial focus
+    //if (document.activeElement != document.body) {
+      document.activeElement.blur();
+    //}
 });
