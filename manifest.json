@@ -1,7 +1,10 @@
 {
     "name": "LazyPR",
     "description": "Templates for your pull requests!",
-    "version": "0.2.0",
+    "version": "0.0.1",
+    "permissions": [
+        "tabs", "http://*/*", "https://*/*"
+    ],
     "icons": {
         "128": "img/icon128.png"
     },
