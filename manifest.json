@@ -13,7 +13,7 @@
             "https://github.com/*/*/compare/*",
             "http://github.com/*/*/compare/*"
         ],
-        "js": ["inline_content.js"],
+        "js": ["content.js"],
         "run_at": "document_end"
     }],
     "manifest_version": 2
