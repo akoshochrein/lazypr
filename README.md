@@ -5,6 +5,13 @@ Lazy Pull Request Templates
 An easy way to fill up your pull-request descriptions. Click on the extension icon on the compare page and select the template you would like to use.
 
 ### Installation
+
+#### From the web store
+
+Just visit [this link](https://chrome.google.com/webstore/detail/lazypr/pmcgheahoojfndonepmblhnmcahnbbho) and download the extension.
+
+#### Locally
+
 1. Clone the package.
 2. Load it into your chrome extensions.
 3. ???
