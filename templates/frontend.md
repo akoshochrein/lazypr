@@ -12,6 +12,7 @@
  - [ ] Run unit tests   
  - [ ] Run acceptance tests
  - [ ] Check with product
+ - [ ] i18n ready
 
 ### Screenshots
 
